@@ -21,11 +21,13 @@
 <meta property="og:title" content="The Social Aura | Digital Marketing Agency">
 <meta property="og:description" content="Social media, SEO, paid ads, content, video and web design, handled by one team.">
 <meta property="og:url" content="https://www.thesocialaura.ca/">
-<!-- EDIT: add a 1200x630 image named og-image.jpg next to index.html for link previews -->
-<meta property="og:image" content="https://www.thesocialaura.ca/og-image.jpg">
+<meta property="og:image" content="https://www.thesocialaura.ca/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.thesocialaura.ca/og-image.png">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23FF7AB0' stroke-width='10'/%3E%3Ccircle cx='32' cy='32' r='7' fill='%23FFB088'/%3E%3C/svg%3E">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +41,13 @@
   "name": "The Social Aura",
   "description": "Digital marketing agency offering social media marketing, SEO, paid advertising, content marketing, branding, web design, video production, influencer marketing, email marketing, reputation management and analytics.",
   "url": "https://www.thesocialaura.ca/",
+  "logo": "https://www.thesocialaura.ca/logo-icon.png",
   "email": "info@thesocialaura.ca",
+  "sameAs": [
+    "https://www.instagram.com/thesocialaura.ca/",
+    "https://www.facebook.com/profile.php?id=61594245015627",
+    "https://www.linkedin.com/in/the-social-aura-8b299b438"
+  ],
   "telephone": "+17788220026",
   "address": {
     "@type": "PostalAddress",
@@ -113,12 +121,14 @@
   .site-header{position:sticky;top:0;z-index:50;background:rgba(26,18,64,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);color:#fff}
   .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
   .brand{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:-.02em;text-decoration:none;color:#fff}
+  .brand img{display:block;height:44px;width:auto}
   .menu{display:flex;align-items:center;gap:30px}
   .menu a:not(.btn){text-decoration:none;font-weight:600;font-size:.98rem;color:#E4DEF7}
   .menu a:not(.btn):hover{color:#fff;text-decoration:underline;text-underline-offset:6px}
   .menu-toggle{display:none;background:none;border:1.5px solid rgba(255,255,255,.4);color:#fff;border-radius:999px;padding:8px 18px;font:600 .95rem var(--body);cursor:pointer}
 
   @media (max-width:859px){
+    .brand img{height:28px}
     .menu-toggle{display:inline-flex}
     .menu{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;padding:12px 24px 28px;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.1)}
     .menu.open{display:flex}
@@ -270,6 +280,16 @@
   .footer-links a{color:#E4DEF7;text-decoration:none}
   .footer-links a:hover{text-decoration:underline;text-underline-offset:4px}
 
+  .contact-cta{margin-top:30px}
+  .linklike{background:none;border:0;padding:0;color:#E4DEF7;font:inherit;cursor:pointer}
+  .linklike:hover{text-decoration:underline;text-underline-offset:4px}
+
+  .consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:60;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;max-width:760px;margin-inline:auto;padding:18px 22px;border-radius:16px;background:var(--ink);color:#fff;border:1px solid rgba(255,255,255,.2);box-shadow:0 12px 40px rgba(10,6,30,.4)}
+  .consent[hidden]{display:none}
+  .consent p{flex:1 1 320px;font-size:.95rem;line-height:1.5;color:#E4DEF7}
+  .consent a{color:#fff;text-underline-offset:3px}
+  .consent-actions{display:flex;gap:10px}
+
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
     *,*::before,*::after{animation:none!important;transition:none!important}
@@ -284,16 +304,7 @@
 <header class="site-header on-dark">
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="The Social Aura, home">
-      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
-        <defs>
-          <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#FF5FA2"/><stop offset=".5" stop-color="#FFB088"/><stop offset="1" stop-color="#8B7BFF"/>
-          </linearGradient>
-        </defs>
-        <circle cx="16" cy="16" r="12" fill="none" stroke="url(#brandGrad)" stroke-width="4"/>
-        <circle cx="16" cy="16" r="4" fill="#FFB088"/>
-      </svg>
-      The Social Aura
+      <img src="logo.svg" alt="The Social Aura" width="347" height="48">
     </a>
 
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
@@ -722,6 +733,7 @@
         <div><dt>Phone and WhatsApp</dt><dd><a href="tel:+17788220026">+1 778 822 0026</a></dd></div>
         <div><dt>Location</dt><dd>Based in Vancouver, BC. Proudly Canadian.</dd></div>
       </dl>
+      <p class="contact-cta"><a class="btn btn-ghost" href="https://wa.me/17788220026?text=Hi%20The%20Social%20Aura%2C%20I%27d%20like%20a%20free%20audit." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
     </div>
 
     <form class="form" id="contactForm" novalidate>
@@ -788,17 +800,25 @@
 <footer class="site-footer on-dark">
   <div class="wrap footer-row">
     <p>&copy; <span id="year">2026</span> The Social Aura. All rights reserved.</p>
-    <!-- EDIT: replace the # links with your real social profile and policy page URLs -->
     <nav class="footer-links" aria-label="Footer">
-      <a href="#" rel="noopener">Instagram</a>
-      <a href="#" rel="noopener">Facebook</a>
-      <a href="#" rel="noopener">LinkedIn</a>
-      <a href="#" rel="noopener">YouTube</a>
-      <a href="#">Privacy policy</a>
-      <a href="#">Terms</a>
+      <a href="https://www.instagram.com/thesocialaura.ca/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61594245015627" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://www.linkedin.com/in/the-social-aura-8b299b438" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://wa.me/17788220026" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href="privacy-policy.html">Privacy policy</a>
+      <a href="terms.html">Terms</a>
+      <button type="button" class="linklike" id="cookieSettings">Cookie settings</button>
     </nav>
   </div>
 </footer>
+
+<div class="consent on-dark" id="consent" role="dialog" aria-label="Cookie notice" hidden>
+  <p>We use cookies to see how visitors use our site and to measure our ads. You can accept or decline. Read our <a href="privacy-policy.html">privacy policy</a>.</p>
+  <div class="consent-actions">
+    <button class="btn btn-sm" type="button" id="consentAccept">Accept</button>
+    <button class="btn btn-sm btn-ghost" type="button" id="consentDecline">Decline</button>
+  </div>
+</div>
 
 <script>
 (function () {
@@ -807,12 +827,78 @@
   /* ============ EDIT THESE TWO LINES ============
      FORM_ENDPOINT: paste your Formspree (or Web3Forms) URL here, for example
        "https://formspree.io/f/abcdwxyz"
-     Leave it empty and the form will open the visitor's email app instead.
+     If this is ever left empty, the form opens the visitor's email app instead.
      CONTACT_EMAIL: where you want enquiries to arrive. */
-  var FORM_ENDPOINT = "";
+  var FORM_ENDPOINT = "https://formspree.io/f/xwlpvbpr";
   var CONTACT_EMAIL = "info@thesocialaura.ca";
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ============ ANALYTICS AND ADS TRACKING ============
+     Google Analytics 4 and the Meta Pixel load only AFTER the visitor clicks Accept
+     on the cookie notice. */
+  var GA_ID = "G-S5RGEK7Q81";
+  var META_PIXEL_ID = "1100000122558400";
+  var CONSENT_KEY = "tsa_cookie_consent";
+  var trackersLoaded = false;
+
+  function getConsent() { try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; } }
+  function setConsent(v) { try { localStorage.setItem(CONSENT_KEY, v); } catch (e) {} }
+
+  function loadTrackers() {
+    if (trackersLoaded) return;
+    trackersLoaded = true;
+
+    /* Google Analytics 4 */
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID);
+    var g = document.createElement("script");
+    g.async = true;
+    g.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(g);
+
+    /* Meta Pixel */
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");
+    window.fbq("init", META_PIXEL_ID);
+    window.fbq("track", "PageView");
+  }
+
+  function track(metaEvent, gaEvent) {
+    if (!trackersLoaded) return;
+    try { if (window.fbq) window.fbq("track", metaEvent); } catch (e) {}
+    try { if (window.gtag) window.gtag("event", gaEvent); } catch (e) {}
+  }
+
+  var banner = document.getElementById("consent");
+  var consent = getConsent();
+  if (consent === "granted") loadTrackers();
+  else if (consent !== "denied" && banner) banner.hidden = false;
+
+  var accept = document.getElementById("consentAccept");
+  var decline = document.getElementById("consentDecline");
+  var cookieSettings = document.getElementById("cookieSettings");
+  if (accept) accept.addEventListener("click", function () {
+    setConsent("granted"); if (banner) banner.hidden = true; loadTrackers();
+  });
+  if (decline) decline.addEventListener("click", function () {
+    setConsent("denied"); if (banner) banner.hidden = true;
+    if (trackersLoaded) window.location.reload(); /* stop trackers that already started */
+  });
+  if (cookieSettings) cookieSettings.addEventListener("click", function () {
+    if (banner) { banner.hidden = false; if (accept) accept.focus(); }
+  });
+
+  /* Count taps on WhatsApp, phone and email links */
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a[href]") : null;
+    if (!a) return;
+    var h = a.getAttribute("href") || "";
+    if (h.indexOf("wa.me") > -1) track("Contact", "whatsapp_click");
+    else if (h.indexOf("tel:") === 0) track("Contact", "phone_click");
+    else if (h.indexOf("mailto:") === 0) track("Contact", "email_click");
+  });
 
   /* Footer year */
   var yr = document.getElementById("year");
@@ -900,6 +986,7 @@
           "mailto:" + CONTACT_EMAIL +
           "?subject=" + encodeURIComponent("Free audit request from " + name) +
           "&body=" + encodeURIComponent(body);
+        track("Contact", "email_click");
         setStatus("Your email app should open with your request ready to send.", "ok");
         return;
       }
@@ -913,6 +1000,7 @@
         .then(function (res) {
           if (!res.ok) throw new Error("Request failed");
           form.reset();
+          track("Lead", "generate_lead");
           setStatus("Thanks, " + name + ". We have received your request and will reply by email.", "ok");
         })
         .catch(function () {
